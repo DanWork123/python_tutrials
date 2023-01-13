@@ -1,0 +1,12 @@
+{# Say Hello to users #}
+{% if users == [] %}
+I can't say Hello.
+{% else %}
+{% for user in users %}
+Hello, {{ user }} !
+{% endfor %}
+{% endif %}
+
+## This is h2 style of markdown
+# If line statements are enabled by the application, it's possible to mark a line as a statement.
+# https://tedboy.github.io/jinja2/templ8.html
