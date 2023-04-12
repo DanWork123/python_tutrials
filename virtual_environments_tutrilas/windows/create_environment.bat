@@ -38,16 +38,16 @@ REM Pythonのバージョンに関してのエラーレベルを取得する
 if %ERRORLEVEL% == 0 (
   REM Python 3.xの場合の処理
   set "VENV_DIR=%cd%\myenv"
-  %PYTHON_PATH% -m venv %VENV_DIR%
-  call %VENV_DIR%\Scripts\activate.bat
+  %PYTHON_PATH% -m venv !VENV_DIR!
+  call !VENV_DIR!\Scripts\activate.bat
   pip install -r %REQUIREMENT_FILE%
   deactivate
 ) else (
   REM Python 2.xの場合の処理
   set "VENV_DIR=%cd%\myenv"
   %PYTHON_PATH% -m pip install virtualenv
-  virtualenv %VENV_DIR%
-  call %VENV_DIR%\Scripts\activate.bat
+  virtualenv !VENV_DIR!
+  call !VENV_DIR!\Scripts\activate.bat
   pip install -r %REQUIREMENT_FILE%
   deactivate
 )
