@@ -40,7 +40,7 @@
     [System.Environment]::SetEnvironmentVariable('path', $env:USERPROFILE + "\.pyenv\pyenv-win\bin;" + $env:USERPROFILE + "\.pyenv\pyenv-win\shims;" + [System.Environment]::GetEnvironmentVariable('path', "User"),"User")
     ```
 3. PowerShell を一度閉じ、再度開きなおす
-4. `pyenv --version` を入力し、以下のような表示が出ればインストールが完了している
+4. `pyenv --version` を入力し、バージョンの情報が表示されればインストールが完了している
     - 実行エラーが出る場合は`手順 1`を参照する
         ```pwsh
         PowerShell -ExecutionPolicy RemoteSigned pyenv --version
